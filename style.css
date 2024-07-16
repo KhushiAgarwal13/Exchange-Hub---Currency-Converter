@@ -1,0 +1,192 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+wrapper header {
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1976D2; /* Darker blue */
+    text-transform: uppercase; /* Optional: makes it stand out */
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2196F3, #90CAF9); /* Blue gradient */
+    position: relative;
+    overflow: hidden;
+}
+
+.wrapper {
+    width: 400px;
+    padding: 30px;
+    border-radius: 7px;
+    background: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.wrapper header {
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1976D2; /* Darker blue */
+}
+
+.wrapper form {
+    margin: 0 0 20px 0;
+}
+
+form :where(input, select, button) {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+form p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+form input {
+    height: 50px;
+    font-size: 17px;
+    padding: 0 15px;
+    border: 1px solid #999;
+    transition: border 0.3s ease;
+}
+
+form input:focus {
+    padding: 0 14px;
+    border: 2px solid #2196F3; /* Blue focus */
+}
+
+form .drop-list {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.drop-list .select-box {
+    display: flex;
+    height: 45px;
+    width: 115px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+.select-box select {
+    width: auto;
+    font-size: 16px;
+    margin: 0 -5px 0 5px;
+}
+
+/* Customize the scroll-bar */
+.select-box select::-webkit-scrollbar {
+    width: 8px;
+}
+
+.select-box select::-webkit-scrollbar-track {
+   background: #fff;
+}
+
+.select-box select::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 8px;
+    border-right: 2px solid #fff;
+}
+
+.select-box img {
+    max-width: 25px;
+}
+
+.drop-list .icon {
+    cursor: pointer;
+    font-size: 22px;
+    margin-top: 30px;
+    color: #2196F3; /* Blue icon */
+}
+
+form .exchange-rate {
+    font-size: 17px;
+    margin: 20px 0 30px;
+    color: #333;
+}
+
+form button {
+    height: 52px;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    background: #2196F3; /* Blue button */
+    margin: 5px 0;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #1976D2; /* Darker blue on hover */
+}
+
+.result {
+    font-size: 18px;
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
+}
+
+/* Floating elements */
+.floating {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating:nth-child(1) {
+    background: rgba(255, 255, 255, 0.3);
+    width: 100px;
+    height: 100px;
+    left: 15%;
+    top: 20%;
+}
+
+.floating:nth-child(2) {
+    background: rgba(255, 200, 0, 0.4); /* Yellow */
+    width: 150px;
+    height: 150px;
+    left: 70%;
+    top: 30%;
+}
+
+.floating:nth-child(3) {
+    background: rgba(0, 150, 136, 0.2); /* Teal */
+    width: 200px;
+    height: 200px;
+    left: 30%;
+    top: 60%;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
